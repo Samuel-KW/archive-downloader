@@ -132,29 +132,29 @@ def thread():
         except:
             pages_error.append(url)
 
-        print(Fore.WHITE + '\n------------------------------------------------------\n')
-
-
 print(Fore.MAGENTA + '\nWayback Machine Archive Downloader')
 print(Fore.WHITE + 'Developed by Samuel Walls\n')
 
 
-print(Fore.CYAN + 'Website:' + Fore.YELLOW)
+print(Fore.CYAN + 'Website:' + Fore.WHITE)
 inp_website = input()
 if website: website = inp_website
 
-inp_start_year = input(Fore.CYAN + 'Starting year (2021):' + Fore.YELLOW)
+print(Fore.CYAN + '\nStarting year (2021):' + Fore.WHITE)
+inp_start_year = input()
 if inp_start_year: start_year = int(inp_start_year)
 
-inp_threads = input(Fore.CYAN + 'Threads (1):' + Fore.YELLOW)
+print(Fore.CYAN + '\nThreads (1):' + Fore.WHITE)
+inp_threads = input()
 if inp_threads: threads = int(inp_threads)
 
-inp_max_attempts = input(Fore.CYAN + 'Attempts per request (25):' + Fore.YELLOW)
+print(Fore.CYAN + '\nAttempts per request (25):' + Fore.WHITE)
+inp_max_attempts = input()
 if inp_max_attempts: max_attempts = int(inp_max_attempts)
 
 
 
-print(Fore.CYAN + '\nFetching all archived pages for' + Fore.YELLOW, website + Fore.CYAN + '...')
+print(Fore.CYAN + '\n\nFetching all archived pages for' + Fore.YELLOW, website + Fore.CYAN + '...')
 
 pages = get_archive(website)
 header = pages.pop()
